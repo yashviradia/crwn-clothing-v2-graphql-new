@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 import { ApolloProvider } from '@apollo/client/react';
 
 import App from './App';
@@ -11,7 +11,7 @@ import { CartProvider } from './contexts/cart.context';
 
 import './index.scss';
 
-const httpLink = createHttpLink({
+const httpLink = new HttpLink({
   uri: 'https://crwn-clothing.com/',
 });
 
