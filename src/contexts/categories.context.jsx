@@ -25,7 +25,8 @@ export const CategoriesProvider = ({ children }) => {
   const { loading, error, data } = useQuery(COLLECTIONS);
   const [categoriesMap, setCategoriesMap] = useState({});
 
-  console.log(data)
+  console.log("loading", loading);
+  console.log("data", data);
 
   const value = { categoriesMap };
   return (
